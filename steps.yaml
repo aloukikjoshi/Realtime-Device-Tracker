@@ -1,0 +1,10 @@
+This file only roughly describes the steps/procedure for the project . I created it when I was working on the project for my reference. It is not the final version of the project. It is just a rough idea of how I will be working on the project. So don't make too much sense out of it.
+
+Check if the browser supports geolocation - Basically we have to check that where is the frontend running. For frontend I am using Vanilla JS. So if the browser doesn't supports the geolocation api then we can't proceed further. And if it supports then we need to allow the application to access the location of our system.
+Set options for high accuracy, a 5-second timeout, and no caching. Using high accuracy I mean to say that I want to find the pin pointed location. And in every 5 seconds the application will bbe sending the coordinates to the backend. And no caching means that the browser will not cache the location.
+Used watchPosition to track the users location continuously.
+Exit the latitude and longitude via a socket with "send-location". This will emit a socket dot named "send-location". Logging the errors if any.
+Initialize the map centered at the coordinates (0,0) by default, with the level of 15 (2 level is much far and 15 level is much closer). Adding OpenStreetMap tiles to the map. This will make the map look good and easily zoom-able and accessible through the center.
+Creating an object marker which will be used to depict my location.
+When receiving the location data via the socket, extract id, latitude and longitude, I had centered the map on the new coordinates.
+If a marker for an ID exist then the position of the marker will be updated, otherwise a new marker will be created with the given coordinates and add it to the map. When a user disconnects the browser the marker will go to the realtime, so removing the markers from the map and delete it.
