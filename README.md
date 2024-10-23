@@ -46,4 +46,3 @@ This project is a real-time device tracker that uses geolocation to track the us
 
 ## 📄 License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
-```
