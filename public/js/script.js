@@ -11,7 +11,7 @@ if (navigator.geolocation) {
         },
         {
             enableHighAccuracy: true,
-            timeout: 5000, // 5 seconds = 5000 milliseconds
+            timeout: 2000, // 2 seconds = 2000 milliseconds
             maximumAge: 0
         }
     );
